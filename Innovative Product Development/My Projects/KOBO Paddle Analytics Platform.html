@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KOBO Paddle Analytics Platform — James Rose</title>
+<meta name="description" content="Custom electronic board design and Zephyr firmware for an nRF52840 pickleball paddle with IMU sensor fusion, ball-contact detection, Bluetooth LE, and low-power operation.">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f3f1e9;color:#102a24;font:16px/1.7 system-ui,sans-serif}main{padding-bottom:24px}a{color:inherit;text-underline-offset:4px}.back{font-size:14px}.eyebrow{margin:24px 0 12px;text-transform:uppercase;letter-spacing:.12em;font-size:12px;color:#536176}h1{font-size:clamp(36px,6vw,64px);line-height:1.08;letter-spacing:-.045em;margin:0 0 24px}h2{font-size:28px;line-height:1.2;margin:42px 0 18px}h3{font-size:18px;margin:0 0 8px}p{margin:0 0 20px}.lead{font-size:20px;max-width:850px;color:#536176}figure{margin:32px 0}img{display:block;width:100%;height:auto;border-radius:8px}figcaption{font-size:13px;color:#536176;margin-top:10px}.tags{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0}.tags span{border:1px solid #d8e0ee;border-radius:24px;padding:6px 12px;font-size:12px}.contributions{display:grid;grid-template-columns:1fr 1fr;gap:16px}.contributions article{background:#fff;padding:24px;border:1px solid #d8e0ee}.contributions p{margin:0;color:#536176}.gallery{display:grid;grid-template-columns:1fr 1.4fr;gap:24px;align-items:start}.gallery figure{margin:0}.gallery img{max-height:600px;object-fit:contain;background:#e9eef7}footer{border-top:1px solid #d8e0ee;margin-top:48px;padding-top:24px;font-size:14px}@media(max-width:640px){.contributions,.gallery{grid-template-columns:1fr}.lead{font-size:18px}}
+</style>
+<link rel="stylesheet" href="../../case-study.css">
+</head>
+<body>
+<nav class="portfolio-nav" aria-label="Portfolio"><a href="../../index.html">JR / James Rose — Back to portfolio</a><a href="mailto:Jamesrose0993@gmail.com">Contact James ↗</a></nav>
+<main>
+<a class="back" href="../../index.html#work">← Back to selected work</a>
+<p class="eyebrow">Sports technology · Embedded systems</p>
+<h1>KOBO Paddle Analytics Platform</h1>
+<p class="lead">I designed the electronic board and developed the embedded firmware for a battery-powered system that captures pickleball paddle motion and detects where the ball contacts the paddle face.</p>
+<figure><img src="KOBO%20Paddle%20Analytics%20Platform/cover.png" alt="KOBO pickleball paddle with exposed electronics alongside Live and Impact Map mobile app screens"><figcaption>Portfolio cover composed from the KOBO prototype and mobile app reference images.</figcaption></figure>
+<div class="tags"><span>Nordic nRF52840</span><span>Zephyr RTOS</span><span>Bluetooth LE</span><span>IMU</span><span>Pressure Sensors</span><span>Sensor Fusion</span><span>Electronic Board Design</span><span>Low-Power Embedded Systems</span></div>
+<h2>Connecting paddle motion to mobile analytics</h2>
+<p>Built around the Nordic nRF52840 and Zephyr RTOS, the device combines an IMU with pressure sensors to capture motion and ball-contact data. I implemented sensor fusion to process accelerometer and gyroscope readings and estimate the paddle’s orientation as roll, pitch, and yaw. The firmware also processes pressure sensor readings to determine the ball’s contact position on the paddle.</p>
+<p>The device transmits orientation and ball-contact position data to the KOBO mobile app through Bluetooth Low Energy. To support battery-powered operation, I implemented low-power firmware logic using Zephyr’s power-management capabilities.</p>
+<h2>My contributions</h2>
+<div class="contributions">
+<article><h3>Electronic board design</h3><p>Designed the custom board integrating the nRF52840, IMU, pressure sensors, and battery-powered circuitry.</p></article>
+<article><h3>Embedded firmware</h3><p>Developed Zephyr-based firmware for sensor acquisition, data processing, and wireless communication.</p></article>
+<article><h3>Sensor fusion</h3><p>Combined accelerometer and gyroscope data to estimate paddle orientation as roll, pitch, and yaw.</p></article>
+<article><h3>Ball-contact detection</h3><p>Processed pressure sensor data to determine contact position on the paddle face.</p></article>
+<article><h3>Bluetooth LE integration</h3><p>Transmitted paddle orientation and ball-contact data to the KOBO mobile app.</p></article>
+<article><h3>Power management</h3><p>Implemented low-power operation in Zephyr to reduce battery consumption.</p></article>
+</div>
+<h2>Hardware and app integration</h2>
+<div class="gallery">
+<figure><img loading="lazy" src="KOBO%20Paddle%20Analytics%20Platform/prototype.jpg" alt="KOBO prototype showing the custom PCB, radio module, and battery at the paddle throat"><figcaption>The physical prototype with exposed electronics and battery.</figcaption></figure>
+<figure><img loading="lazy" src="KOBO%20Paddle%20Analytics%20Platform/kobo-2.webp" alt="KOBO mobile app screenshots showing an impact map, velocity metrics, and a serve dashboard"><figcaption>KOBO mobile app analytics screens. My contribution focused on the electronic board, embedded firmware, and Bluetooth LE integration.</figcaption></figure>
+</div>
+<section aria-labelledby="app-gallery-title"><h2 id="app-gallery-title">KOBO mobile app gallery</h2><p>Explore the app screens that accompany the connected paddle. Select an image to view it at full size.</p>
+<figure><h3>KOBO app overview</h3><a href="KOBO%20Paddle%20Analytics%20Platform/kobo-0.webp" aria-label="View KOBO app overview at full size"><img loading="lazy" width="900" height="600" src="KOBO%20Paddle%20Analytics%20Platform/kobo-0.webp" alt="KOBO app overview showing connectivity, calibration, live monitoring, performance metrics, and session history"></a><figcaption>Connectivity and calibration, live session monitoring, performance dashboards, and session history.</figcaption></figure>
+<figure><h3>Device setup and live monitoring</h3><a href="KOBO%20Paddle%20Analytics%20Platform/kobo-1.webp" aria-label="View Device setup and live monitoring at full size"><img loading="lazy" width="1200" height="900" src="KOBO%20Paddle%20Analytics%20Platform/kobo-1.webp" alt="KOBO device settings, Bluetooth connection screen, and live paddle contact display"></a><figcaption>Device calibration, paddle selection, Bluetooth connection, and live paddle monitoring.</figcaption></figure>
+<figure><h3>Session history and impact maps</h3><a href="KOBO%20Paddle%20Analytics%20Platform/kobo-3.webp" aria-label="View Session history and impact maps at full size"><img loading="lazy" width="1200" height="900" src="KOBO%20Paddle%20Analytics%20Platform/kobo-3.webp" alt="KOBO dark-mode session history with hit charts, stroke breakdown, and ball-contact positions"></a><figcaption>Session summaries, shot-by-shot charts, stroke breakdowns, and recorded impact positions.</figcaption></figure>
+<figure><h3>Insights and calibration</h3><a href="KOBO%20Paddle%20Analytics%20Platform/kobo-4.webp" aria-label="View Insights and calibration at full size"><img loading="lazy" width="1200" height="900" src="KOBO%20Paddle%20Analytics%20Platform/kobo-4.webp" alt="KOBO insights, dark-mode device settings, and sweet spot mapping controls"></a><figcaption>Performance insights, device settings, and adjustable sweet spot mapping.</figcaption></figure>
+</section>
+</main></body>
+</html>
